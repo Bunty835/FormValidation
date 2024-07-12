@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #btn{
+
+            border: none;
+            border-radius: 100%;
+            background-color: aqua;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"> Hello </p>        <!--  Target by id  -->
+
+    <h1 class="h1"> Dom Class</h1>    <!--  Target by Class_Name  -->
+
+    <h2 class="h2"> Javascript Dom</h2>       <!--  Target by Tag_Name  -->
+
+    <img src="/Twitter.png" alt=" " style="width: 200px;" id="myimg"  onmouseenter="myimage()">
+    <button onclick="myimage()"> Click here !</button>
+    <button id = "btn" style="background-color: blue; border: none;" onclick =" myBtn()"> login </button>
+
+    <script>
+    //    let a = document.getElementById('p1').innerText = 'Welcome!'
+    //    let b = document.getElementsByClassName('h1')[0].innerText += 'Bye Bye'
+    //    let c = document.getElementsByTagName('h2')[0].innerHTML = 'Python'
+    //    console.log(a);
+    //    console.log(b);
+    //    console.log(c);
+        //   let a = document.getElementById('myimg').attributes[0].value ="/01basic/Snap.png"
+        //   console.log(a);
+        function myimage(){
+            let b = document.getElementById('myimg').attributes[0].value ="/Snap.png"
+          console.log(b);
+        }
+
+          function myBtn(){
+            let c = document.getElementById('btn').style.backgroundColor='yellow'
+          }
+         console.log(c);
+
+    </script>
+
+
+</body>
+</html>

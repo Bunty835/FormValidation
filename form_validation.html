@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(153, 204, 187);
+            margin-top: 200px;
+            padding-left: 200px;
+        }
+        span{
+            color: red;
+            font-size: 20px;
+        }
+       
+    
+    </style>
+</head>
+<body>
+    <form action="/Dom.html" onsubmit="return formValid()">
+        <label for = " ">First Name</label>
+        <input type="text" name = "fname" id="fname"><span id="fnameerror" ></span>
+        <br/>
+
+        <label for = " ">Password</label>
+        <input text="text" name = "pass" id="pass"></inpt>
+        <label for = " ">Conform Password</label>
+        <input text="text" name = "cpass" id="cpass"></inpt><span id="passerror" ></span>
+
+        <input type="submit" value="submit">
+        
+    </form>
+
+    <script>
+        function formValid(){
+            let a = document.getElementById('fname').value;
+            if(a == ""){
+                document.getElementById('fnameerror').innerText = "Fill your First Name"
+                return false
+            }
+
+            if( a.trim( )==''){
+                document.getElementById("fnameerror").innerText = "Dont use Space"
+                return false
+            }
+
+            let Password = document.getElementById('pass').value;
+            let ConformPassword = document.getElementById('cpass').value;
+
+            if(Password !== ConformPassword){
+                document.getElementById("passerror").innerText="Passowrd Not Match !"
+                return false
+            }
+            if(Password.length < 5 ){
+                document.getElementById("passerror").innerText="Password length min 5 element"
+                return false
+
+            }
+            if(Password=='' ){
+                document.getElementById("passerror").innerText="Please Enter Password "
+                return false
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
